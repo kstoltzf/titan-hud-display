@@ -3,10 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import CheckEngineLight from './check-engine-light/CheckEngineLight';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <CheckEngineLight />
   </React.StrictMode>,
   document.getElementById('root')
 );
