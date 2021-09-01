@@ -47,7 +47,12 @@
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.tsx",
-      "!src/**/*.test.tsx"
+      "!src/**/*.test.tsx",
+      "!src/**/*.spec.tsx"
+    ],
+    "testMatch": [
+      "**/__tests__/**/*.[jt]s?(x)",
+      "**/?(*.)+(test).[jt]s?(x)"
     ]
   },
   "husky": {
