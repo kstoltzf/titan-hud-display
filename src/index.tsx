@@ -3,10 +3,12 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import CheckEngineLight from "./check-engine-light/CheckEngineLight";
+import Tachometer from "./tachometer/Tachometer";
 
 ReactDOM.render(
   <React.StrictMode>
     <CheckEngineLight />
+    <Tachometer />
   </React.StrictMode>,
   document.getElementById("root")
 );
