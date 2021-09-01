@@ -19,6 +19,8 @@ jobs:
       run: npm install
     - name: Run the tests and generate coverage report
       run: npm test -- --coverage
+    - name: Run Cypress tests and generate dashboard
+      run: npx cypress run-ct --record --key af2e2a0a-1813-47cb-a1b3-f904fdc8d89a --parallel
     - name: SonarCloud Scan
       uses: SonarSource/sonarcloud-github-action@master
       env:
