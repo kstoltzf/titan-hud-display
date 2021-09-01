@@ -1,0 +1,21 @@
+name: React application
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
+    - name: Set up Node.js 14.17.6
+      uses: actions/setup-node@v1
+      with:
+        node-version: 14.17.6
+    - name: Install dependencies
+      run: npm install
+    - name: Run the tests and generate coverage report
+      run: npm test -- --coverage
