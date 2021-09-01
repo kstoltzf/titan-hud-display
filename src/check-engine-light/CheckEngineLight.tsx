@@ -6,6 +6,7 @@ function CheckEngineLight() {
       src={checkEngineLightIcon}
       className="CheckEngineLight-checkEngineLightIcon"
       alt="checkEngineLightIcon"
+      data-cy="checkEngineLightIcon"
     />
   );
 }
