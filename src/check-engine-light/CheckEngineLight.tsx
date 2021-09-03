@@ -1,5 +1,4 @@
 import checkEngineLightIcon from "./check-engine-light.png";
-import "./CheckEngineLight.css";
 
 function CheckEngineLight() {
   return (

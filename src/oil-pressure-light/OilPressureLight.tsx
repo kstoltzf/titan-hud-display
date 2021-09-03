@@ -1,5 +1,4 @@
 import oilPressureLightIcon from "./oil-pressure-light.png";
-import "./OilPressureLight.css";
 
 function OilPressureLight() {
   return (

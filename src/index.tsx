@@ -2,21 +2,15 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
-import CheckEngineLight from "./check-engine-light/CheckEngineLight";
 import Tachometer from "./tachometer/Tachometer";
-import BatteryLight from "./battery-light/BatteryLight";
-import OilPressureLight from "./oil-pressure-light/OilPressureLight";
-import CoolantTemperatureLight from "./coolant-temperature-light/CoolantTemperatureLight";
-import BrakeWarningLight from "./brake-warning-light/BrakeWarningLight";
+import UpperRowWarningLights from "./upper-row-warning-lights/UpperRowWarningLights";
+import LowerRowWarningLights from "./lower-row-warning-lights/LowerRowWarningLights";
 
 ReactDOM.render(
   <React.StrictMode>
-    <BatteryLight />
-    <OilPressureLight />
-    <CoolantTemperatureLight />
-    <BrakeWarningLight />
+    <UpperRowWarningLights />
     <Tachometer />
-    <CheckEngineLight />
+    <LowerRowWarningLights />
   </React.StrictMode>,
   document.getElementById("root")
 );

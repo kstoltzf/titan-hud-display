@@ -1,5 +1,4 @@
 import batteryLightIcon from "./battery-light.png";
-import "./BatteryLight.css";
 
 function BatteryLight() {
   return (
