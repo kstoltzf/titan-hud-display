@@ -7,13 +7,22 @@ import Paper from "@material-ui/core/Paper";
 import CheckEngineLight from "../check-engine-light/CheckEngineLight";
 import LowFuelLight from "../low-fuel-light/LowFuelLight";
 import "./LowerRowWarningLights.css";
+import { makeStyles } from "@material-ui/core";
+
+const useStyles = makeStyles({
+  table: {
+    minWidth: 640,
+  },
+});
 
 function LowerRowWarningLights() {
+  const classes = useStyles();
+
   return (
     <div>
       <TableContainer component={Paper}>
         <Table
-          className="LowerRowWarningLights-lowerRowWarningLightsTable"
+          className={classes.table}
           aria-label="lowerRowWarningLightsTable"
         >
           <TableBody>

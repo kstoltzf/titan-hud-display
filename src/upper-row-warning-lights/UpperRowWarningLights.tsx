@@ -9,13 +9,21 @@ import OilPressureLight from "../oil-pressure-light/OilPressureLight";
 import CoolantTemperatureLight from "../coolant-temperature-light/CoolantTemperatureLight";
 import BrakeWarningLight from "../brake-warning-light/BrakeWarningLight";
 import "./UpperRowWarningLights.css";
+import { makeStyles } from "@material-ui/core";
+
+const useStyles = makeStyles({
+  table: {
+    minWidth: 640,
+  },
+});
 
 function UpperRowWarningLights() {
+  const classes = useStyles();
   return (
     <div>
       <TableContainer component={Paper}>
         <Table
-          className="UpperRowWarningLights-upperRowWarningLightsTable"
+          className={classes.table}
           aria-label="upperRowWarningLightsTable"
         >
           <TableBody>
