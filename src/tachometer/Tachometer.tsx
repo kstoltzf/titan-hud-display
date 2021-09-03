@@ -1,10 +1,11 @@
 import Chart from "react-google-charts";
+import "./Tachometer.css";
 
 function Tachometer() {
   return (
     <Chart
-      width={400}
-      height={120}
+      width={1600}
+      height={480}
       chartType="Gauge"
       loader={<div>Loading Chart</div>}
       data={[
