@@ -19,6 +19,7 @@ const useStyles = makeStyles({
 
 function UpperRowWarningLights() {
   const classes = useStyles();
+
   return (
     <div>
       <TableContainer component={Paper}>
