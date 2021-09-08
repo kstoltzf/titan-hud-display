@@ -1,6 +1,6 @@
 import checkEngineLightIcon from "./check-engine-light.png";
 
-function CheckEngineLight() {
+export default function CheckEngineLight() {
   return (
     <img
       src={checkEngineLightIcon}
@@ -10,5 +10,3 @@ function CheckEngineLight() {
     />
   );
 }
-
-export default CheckEngineLight;

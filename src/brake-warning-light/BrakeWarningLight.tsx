@@ -1,6 +1,6 @@
 import brakeWarningLightIcon from "./brake-warning-light.png";
 
-function BrakeWarningLight() {
+export default function BrakeWarningLight() {
   return (
     <img
       src={brakeWarningLightIcon}
@@ -10,5 +10,3 @@ function BrakeWarningLight() {
     />
   );
 }
-
-export default BrakeWarningLight;

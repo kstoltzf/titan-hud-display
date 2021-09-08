@@ -1,6 +1,6 @@
 import tractionControlLightIcon from "./traction-control-light.png";
 
-function TractionControlLight() {
+export default function TractionControlLight() {
   return (
     <img
       src={tractionControlLightIcon}
@@ -10,5 +10,3 @@ function TractionControlLight() {
     />
   );
 }
-
-export default TractionControlLight;

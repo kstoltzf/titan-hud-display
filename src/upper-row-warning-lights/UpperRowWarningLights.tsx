@@ -17,7 +17,7 @@ const useStyles = makeStyles({
   },
 });
 
-function UpperRowWarningLights() {
+export default function UpperRowWarningLights() {
   const classes = useStyles();
 
   return (
@@ -49,5 +49,3 @@ function UpperRowWarningLights() {
     </div>
   );
 }
-
-export default UpperRowWarningLights;

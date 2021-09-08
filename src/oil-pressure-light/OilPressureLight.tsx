@@ -1,6 +1,6 @@
 import oilPressureLightIcon from "./oil-pressure-light.png";
 
-function OilPressureLight() {
+export default function OilPressureLight() {
   return (
     <img
       src={oilPressureLightIcon}
@@ -10,5 +10,3 @@ function OilPressureLight() {
     />
   );
 }
-
-export default OilPressureLight;

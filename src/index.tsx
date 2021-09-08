@@ -5,11 +5,13 @@ import reportWebVitals from "./reportWebVitals";
 import Tachometer from "./tachometer/Tachometer";
 import UpperRowWarningLights from "./upper-row-warning-lights/UpperRowWarningLights";
 import LowerRowWarningLights from "./lower-row-warning-lights/LowerRowWarningLights";
+import Speedometer from "./speedometer/Speedometer";
+import InfoRow from "./info-row/InfoRow";
 
 ReactDOM.render(
   <React.StrictMode>
     <UpperRowWarningLights />
-    <Tachometer />
+    <InfoRow />
     <LowerRowWarningLights />
   </React.StrictMode>,
   document.getElementById("root")

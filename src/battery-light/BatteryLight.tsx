@@ -1,6 +1,6 @@
 import batteryLightIcon from "./battery-light.png";
 
-function BatteryLight() {
+export default function BatteryLight() {
   return (
     <img
       src={batteryLightIcon}
@@ -10,5 +10,3 @@ function BatteryLight() {
     />
   );
 }
-
-export default BatteryLight;

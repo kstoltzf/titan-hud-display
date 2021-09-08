@@ -1,28 +1,24 @@
-import Chart from "react-google-charts";
+import { createStyles, withStyles } from "@material-ui/core/styles";
+import LinearProgress from "@material-ui/core/LinearProgress";
 
-function FuelGauge() {
+const BorderLinearProgress = withStyles(() =>
+  createStyles({
+    root: {
+      height: 20,
+      borderRadius: 5,
+    },
+    bar: {
+      borderRadius: 5,
+      backgroundColor: "#1a90ff",
+    },
+  })
+)(LinearProgress);
+
+export default function FuelGauge() {
   return (
-    <Chart
-      width={100}
-      height={100}
-      chartType="Gauge"
-      loader={<div>Loading Chart</div>}
-      data={[
-        ["Label", "Value"],
-        ["RPMs", 1200],
-      ]}
-      options={{
-        max: 9000,
-        redFrom: 7000,
-        redTo: 9000,
-        yellowFrom: 5000,
-        yellowTo: 7000,
-        majorTicks: ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
-        minorTicks: 10,
-      }}
-      rootProps={{ "data-testid": "1" }}
-    />
+    <div className="">
+      <BorderLinearProgress variant="determinate" value={50} />
+      <p>50%</p>
+    </div>
   );
 }
-
-export default FuelGauge;

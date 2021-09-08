@@ -1,28 +1,24 @@
-import Chart from "react-google-charts";
+import LinearProgress from "@material-ui/core/LinearProgress";
+import { createStyles, withStyles } from "@material-ui/core/styles";
 
-function Tachometer() {
+const BorderLinearProgress = withStyles(() =>
+  createStyles({
+    root: {
+      height: 40,
+      borderRadius: 0,
+    },
+    bar: {
+      borderRadius: 0,
+      backgroundColor: "#1a90ff",
+    },
+  })
+)(LinearProgress);
+
+export default function Tachometer() {
   return (
-    <Chart
-      width={300}
-      height={350}
-      chartType="Gauge"
-      loader={<div>Loading Chart</div>}
-      data={[
-        ["Label", "Value"],
-        ["RPMs", 1200],
-      ]}
-      options={{
-        max: 9000,
-        redFrom: 7000,
-        redTo: 9000,
-        yellowFrom: 5000,
-        yellowTo: 7000,
-        majorTicks: ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
-        minorTicks: 10,
-      }}
-      rootProps={{ "data-testid": "1" }}
-    />
+    <div className="">
+      <BorderLinearProgress variant="determinate" value={50} />
+      <p>1200 RPMs</p>
+    </div>
   );
 }
-
-export default Tachometer;

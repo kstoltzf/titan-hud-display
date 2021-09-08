@@ -1,6 +1,6 @@
 import coolantTemperatureLightIcon from "./coolant-temperature-light.png";
 
-function CoolantTemperatureLight() {
+export default function CoolantTemperatureLight() {
   return (
     <img
       src={coolantTemperatureLightIcon}
@@ -10,5 +10,3 @@ function CoolantTemperatureLight() {
     />
   );
 }
-
-export default CoolantTemperatureLight;

@@ -1,6 +1,6 @@
 import lowFuelLightIcon from "./low-fuel-light.png";
 
-function LowFuelLight() {
+export default function LowFuelLight() {
   return (
     <img
       src={lowFuelLightIcon}
@@ -10,5 +10,3 @@ function LowFuelLight() {
     />
   );
 }
-
-export default LowFuelLight;

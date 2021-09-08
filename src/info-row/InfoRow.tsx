@@ -4,12 +4,11 @@ import TableCell from "@material-ui/core/TableCell";
 import TableContainer from "@material-ui/core/TableContainer";
 import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
-import CheckEngineLight from "../check-engine-light/CheckEngineLight";
-import LowFuelLight from "../low-fuel-light/LowFuelLight";
-import "./LowerRowWarningLights.css";
 import { makeStyles } from "@material-ui/core";
-import TractionControlLight from "../traction-control-light/TractionControlLight";
-import AbsWarningLight from "../abs-warning-light/AbsWarningLight";
+import Speedometer from "../speedometer/Speedometer";
+import FuelGauge from "../fuel-gauge/FuelGauge";
+import TemperatureGauge from "../temperature-gauge/TemperatureGauge";
+import Tachometer from "../tachometer/Tachometer";
 
 const useStyles = makeStyles({
   table: {
@@ -17,7 +16,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function LowerRowWarningLights() {
+export default function InfoRow() {
   const classes = useStyles();
 
   return (
@@ -25,22 +24,24 @@ export default function LowerRowWarningLights() {
       <TableContainer component={Paper}>
         <Table
           className={classes.table}
-          aria-label="lowerRowWarningLightsTable"
-          padding="none"
+          aria-label="infoRowTable"
+          padding="default"
         >
           <TableBody>
-            <TableRow key="LowerRowWarningLights">
-              <TableCell align="center">
-                <CheckEngineLight />
+            <TableRow key="tachometerRow">
+              <TableCell align="center" colSpan={3}>
+                <Tachometer />
               </TableCell>
-              <TableCell align="center">
-                <LowFuelLight />
+            </TableRow>
+            <TableRow key="infoRow">
+              <TableCell align="center" width="50%">
+                <Speedometer />
               </TableCell>
-              <TableCell align="center">
-                <AbsWarningLight />
+              <TableCell align="center" width="25%">
+                <TemperatureGauge />
               </TableCell>
-              <TableCell align="center">
-                <TractionControlLight />
+              <TableCell align="center" width="25%">
+                <FuelGauge />
               </TableCell>
             </TableRow>
           </TableBody>

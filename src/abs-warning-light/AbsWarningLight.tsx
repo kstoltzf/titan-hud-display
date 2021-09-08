@@ -1,6 +1,6 @@
 import absWarningLightIcon from "./abs-warning-light.png";
 
-function AbsWarningLight() {
+export default function AbsWarningLight() {
   return (
     <img
       src={absWarningLightIcon}
@@ -10,5 +10,3 @@ function AbsWarningLight() {
     />
   );
 }
-
-export default AbsWarningLight;
