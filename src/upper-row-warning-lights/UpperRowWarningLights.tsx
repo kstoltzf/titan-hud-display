@@ -13,7 +13,7 @@ import { makeStyles } from "@material-ui/core";
 
 const useStyles = makeStyles({
   table: {
-    minWidth: 640,
+    minWidth: 480,
   },
 });
 
@@ -26,6 +26,7 @@ function UpperRowWarningLights() {
         <Table
           className={classes.table}
           aria-label="upperRowWarningLightsTable"
+          padding="none"
         >
           <TableBody>
             <TableRow key="upperRowWarningLights">

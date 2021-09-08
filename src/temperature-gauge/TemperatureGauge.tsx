@@ -1,6 +1,6 @@
 import Chart from "react-google-charts";
 
-function Tachometer() {
+function TemperatureGauge() {
   return (
     <Chart
       width={300}
@@ -25,4 +25,4 @@ function Tachometer() {
   );
 }
 
-export default Tachometer;
+export default TemperatureGauge;

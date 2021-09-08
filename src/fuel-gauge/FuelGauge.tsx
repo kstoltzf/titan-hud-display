@@ -1,10 +1,10 @@
 import Chart from "react-google-charts";
 
-function Tachometer() {
+function FuelGauge() {
   return (
     <Chart
-      width={300}
-      height={350}
+      width={100}
+      height={100}
       chartType="Gauge"
       loader={<div>Loading Chart</div>}
       data={[
@@ -25,4 +25,4 @@ function Tachometer() {
   );
 }
 
-export default Tachometer;
+export default FuelGauge;

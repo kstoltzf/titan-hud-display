@@ -8,10 +8,12 @@ import CheckEngineLight from "../check-engine-light/CheckEngineLight";
 import LowFuelLight from "../low-fuel-light/LowFuelLight";
 import "./LowerRowWarningLights.css";
 import { makeStyles } from "@material-ui/core";
+import TractionControlLight from "../traction-control-light/TractionControlLight";
+import AbsWarningLight from "../abs-warning-light/AbsWarningLight";
 
 const useStyles = makeStyles({
   table: {
-    minWidth: 640,
+    minWidth: 480,
   },
 });
 
@@ -24,24 +26,22 @@ function LowerRowWarningLights() {
         <Table
           className={classes.table}
           aria-label="lowerRowWarningLightsTable"
+          padding="none"
         >
           <TableBody>
             <TableRow key="LowerRowWarningLights">
-              {/* <TableCell align="center">
-                <EpcLight />
-              </TableCell> */}
               <TableCell align="center">
                 <CheckEngineLight />
               </TableCell>
               <TableCell align="center">
                 <LowFuelLight />
               </TableCell>
-              {/* <TableCell align="center">
+              <TableCell align="center">
                 <AbsWarningLight />
-              </TableCell> */}
-              {/* <TableCell align="center">
+              </TableCell>
+              <TableCell align="center">
                 <TractionControlLight />
-              </TableCell> */}
+              </TableCell>
             </TableRow>
           </TableBody>
         </Table>
