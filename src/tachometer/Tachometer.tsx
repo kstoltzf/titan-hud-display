@@ -18,7 +18,7 @@ export default function Tachometer() {
   return (
     <div className="">
       <BorderLinearProgress variant="determinate" value={50} />
-      <p>1200 RPMs</p>
+      <p style={{ fontSize: "xx-large" }}>1200 RPMs</p>
     </div>
   );
 }

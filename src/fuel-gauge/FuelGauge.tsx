@@ -17,8 +17,9 @@ const BorderLinearProgress = withStyles(() =>
 export default function FuelGauge() {
   return (
     <div className="">
+      <p style={{ fontSize: "x-small" }}>Fuel</p>
       <BorderLinearProgress variant="determinate" value={50} />
-      <p>50%</p>
+      <p style={{ fontSize: "x-large" }}>50%</p>
     </div>
   );
 }

@@ -25,7 +25,7 @@ export default function InfoRow() {
         <Table
           className={classes.table}
           aria-label="infoRowTable"
-          padding="default"
+          padding="normal"
         >
           <TableBody>
             <TableRow key="tachometerRow">

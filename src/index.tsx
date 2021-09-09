@@ -2,17 +2,19 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
-import Tachometer from "./tachometer/Tachometer";
 import UpperRowWarningLights from "./upper-row-warning-lights/UpperRowWarningLights";
 import LowerRowWarningLights from "./lower-row-warning-lights/LowerRowWarningLights";
-import Speedometer from "./speedometer/Speedometer";
 import InfoRow from "./info-row/InfoRow";
+import store from "./app/store";
+import { Provider } from "react-redux";
 
 ReactDOM.render(
   <React.StrictMode>
-    <UpperRowWarningLights />
-    <InfoRow />
-    <LowerRowWarningLights />
+    <Provider store={store}>
+      <UpperRowWarningLights />
+      <InfoRow />
+      <LowerRowWarningLights />
+    </Provider>
   </React.StrictMode>,
   document.getElementById("root")
 );
