@@ -1,6 +1,5 @@
-import { createSlice, PayloadAction, createAsyncThunk } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { RootState } from "../app/store";
-import updateStatus from "./AbsWarningLightService";
 
 export interface AbsWarningLightState {
   isActive: boolean;

@@ -1,16 +1,9 @@
-import { useEffect } from "react";
-import { useAppDispatch, useAppSelector } from "../app/hooks";
+import { useAppSelector } from "../app/hooks";
 import absWarningLightIcon from "./abs-warning-light.png";
-import updateAbsWarningLight from "./AbsWarningLightService";
-import { selectAbsWarningLight, setIsActive } from "./AbsWarningLightSlice";
+import { selectAbsWarningLight } from "./AbsWarningLightSlice";
 
 export default function AbsWarningLight() {
   const absWarningLightState = useAppSelector(selectAbsWarningLight);
-  const dispatch = useAppDispatch();
-
-  useEffect(() => {
-    dispatch(setIsActive(updateAbsWarningLight()));
-  });
 
   return absWarningLightState ? (
     <img

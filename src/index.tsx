@@ -2,18 +2,14 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
-import UpperRowWarningLights from "./upper-row-warning-lights/UpperRowWarningLights";
-import LowerRowWarningLights from "./lower-row-warning-lights/LowerRowWarningLights";
-import InfoRow from "./info-row/InfoRow";
 import store from "./app/store";
 import { Provider } from "react-redux";
+import App from "./app/App";
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <UpperRowWarningLights />
-      <InfoRow />
-      <LowerRowWarningLights />
+      <App />
     </Provider>
   </React.StrictMode>,
   document.getElementById("root")
