@@ -1,4 +1,4 @@
-import { useAppSelector } from "../app/hooks";
+import { useAppSelector } from "../app/Hooks";
 import absWarningLightIcon from "./abs-warning-light.png";
 import { selectAbsWarningLight } from "./AbsWarningLightSlice";
 

@@ -1,7 +1,7 @@
 import UpperRowWarningLights from "../upper-row-warning-lights/UpperRowWarningLights";
 import LowerRowWarningLights from "../lower-row-warning-lights/LowerRowWarningLights";
 import InfoRow from "../info-row/InfoRow";
-import { useAppDispatch } from "./hooks";
+import { useAppDispatch } from "./Hooks";
 import { useEffect } from "react";
 import WebSocketConfiguration from "./WebSocketConfiguration";
 

@@ -1,5 +1,4 @@
 import { setIsActive } from "../abs-warning-light/AbsWarningLightSlice";
-import { useAppDispatch } from "./hooks";
 import io from "socket.io-client";
 
 export default function WebSocketConfiguration(
