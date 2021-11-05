@@ -13,13 +13,17 @@ export const coolantTemperatureLightSlice = createSlice({
   name: "coolantTemperatureLight",
   initialState,
   reducers: {
-    setIsActive: (state, action: PayloadAction<boolean>) => {
+    setCoolantTemperatureLightIsActive: (
+      state,
+      action: PayloadAction<boolean>
+    ) => {
       state.isActive = action.payload;
     },
   },
 });
 
-export const { setIsActive } = coolantTemperatureLightSlice.actions;
+export const { setCoolantTemperatureLightIsActive } =
+  coolantTemperatureLightSlice.actions;
 export const selectCoolantTemperatureLight = (state: RootState) =>
   state.coolantTemperatureLight.isActive;
 

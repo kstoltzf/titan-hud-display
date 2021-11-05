@@ -13,13 +13,17 @@ export const tractionControlLightSlice = createSlice({
   name: "tractionControlLight",
   initialState,
   reducers: {
-    setIsActive: (state, action: PayloadAction<boolean>) => {
+    setTractionControlLightIsActive: (
+      state,
+      action: PayloadAction<boolean>
+    ) => {
       state.isActive = action.payload;
     },
   },
 });
 
-export const { setIsActive } = tractionControlLightSlice.actions;
+export const { setTractionControlLightIsActive } =
+  tractionControlLightSlice.actions;
 export const selectTractionControlLight = (state: RootState) =>
   state.tractionControlLight.isActive;
 

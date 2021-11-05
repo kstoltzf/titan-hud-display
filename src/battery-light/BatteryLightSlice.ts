@@ -13,13 +13,13 @@ export const batteryLightSlice = createSlice({
   name: "batteryLight",
   initialState,
   reducers: {
-    setIsActive: (state, action: PayloadAction<boolean>) => {
+    setBatteryLightIsActive: (state, action: PayloadAction<boolean>) => {
       state.isActive = action.payload;
     },
   },
 });
 
-export const { setIsActive } = batteryLightSlice.actions;
+export const { setBatteryLightIsActive } = batteryLightSlice.actions;
 export const selectBatteryLight = (state: RootState) =>
   state.batteryLight.isActive;
 

@@ -1,6 +1,6 @@
 import oilPressureLightReducer, {
   OilPressureLightState,
-  setIsActive,
+  setOilPressureLightIsActive,
 } from "./OilPressureLightSlice";
 
 describe("oil pressure light slice reducer", () => {
@@ -15,7 +15,10 @@ describe("oil pressure light slice reducer", () => {
   });
 
   it("should handle setIsActive", () => {
-    const actual = oilPressureLightReducer(initialState, setIsActive(true));
+    const actual = oilPressureLightReducer(
+      initialState,
+      setOilPressureLightIsActive(true)
+    );
     expect(actual.isActive).toBeTruthy;
   });
 });

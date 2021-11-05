@@ -13,13 +13,13 @@ export const absWarningLightSlice = createSlice({
   name: "absWarningLight",
   initialState,
   reducers: {
-    setIsActive: (state, action: PayloadAction<boolean>) => {
+    setAbsWarningLightIsActive: (state, action: PayloadAction<boolean>) => {
       state.isActive = action.payload;
     },
   },
 });
 
-export const { setIsActive } = absWarningLightSlice.actions;
+export const { setAbsWarningLightIsActive } = absWarningLightSlice.actions;
 export const selectAbsWarningLight = (state: RootState) =>
   state.absWarningLight.isActive;
 

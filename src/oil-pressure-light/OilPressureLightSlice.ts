@@ -13,13 +13,13 @@ export const oilPressureLightSlice = createSlice({
   name: "oilPressureLight",
   initialState,
   reducers: {
-    setIsActive: (state, action: PayloadAction<boolean>) => {
+    setOilPressureLightIsActive: (state, action: PayloadAction<boolean>) => {
       state.isActive = action.payload;
     },
   },
 });
 
-export const { setIsActive } = oilPressureLightSlice.actions;
+export const { setOilPressureLightIsActive } = oilPressureLightSlice.actions;
 export const selectOilPressureLight = (state: RootState) =>
   state.oilPressureLight.isActive;
 

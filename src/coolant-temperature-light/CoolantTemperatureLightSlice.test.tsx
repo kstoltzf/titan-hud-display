@@ -1,6 +1,6 @@
 import coolantTemperatureLightReducer, {
   CoolantTemperatureLightState,
-  setIsActive,
+  setCoolantTemperatureLightIsActive,
 } from "./CoolantTemperatureLightSlice";
 
 describe("coolant temperature light slice reducer", () => {
@@ -19,7 +19,7 @@ describe("coolant temperature light slice reducer", () => {
   it("should handle setIsActive", () => {
     const actual = coolantTemperatureLightReducer(
       initialState,
-      setIsActive(true)
+      setCoolantTemperatureLightIsActive(true)
     );
     expect(actual.isActive).toBeTruthy;
   });

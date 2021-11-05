@@ -13,13 +13,13 @@ export const lowFuelLightSlice = createSlice({
   name: "lowFuelLight",
   initialState,
   reducers: {
-    setIsActive: (state, action: PayloadAction<boolean>) => {
+    setLowFuelLightIsActive: (state, action: PayloadAction<boolean>) => {
       state.isActive = action.payload;
     },
   },
 });
 
-export const { setIsActive } = lowFuelLightSlice.actions;
+export const { setLowFuelLightIsActive } = lowFuelLightSlice.actions;
 export const selectLowFuelLight = (state: RootState) =>
   state.lowFuelLight.isActive;
 

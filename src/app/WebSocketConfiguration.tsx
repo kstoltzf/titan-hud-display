@@ -1,4 +1,4 @@
-import { setIsActive } from "../abs-warning-light/AbsWarningLightSlice";
+import { setAbsWarningLightIsActive } from "../abs-warning-light/AbsWarningLightSlice";
 import io from "socket.io-client";
 
 export default function WebSocketConfiguration(
@@ -9,6 +9,6 @@ export default function WebSocketConfiguration(
 
   socket.on("test", (msg) => {
     console.log(msg);
-    dispatch(setIsActive(JSON.parse(msg)));
+    dispatch(setAbsWarningLightIsActive(JSON.parse(msg)));
   });
 }

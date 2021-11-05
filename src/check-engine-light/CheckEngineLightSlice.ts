@@ -13,13 +13,13 @@ export const checkEngineLightSlice = createSlice({
   name: "checkEngineLight",
   initialState,
   reducers: {
-    setIsActive: (state, action: PayloadAction<boolean>) => {
+    setCheckEngineLightIsActive: (state, action: PayloadAction<boolean>) => {
       state.isActive = action.payload;
     },
   },
 });
 
-export const { setIsActive } = checkEngineLightSlice.actions;
+export const { setCheckEngineLightIsActive } = checkEngineLightSlice.actions;
 export const selectCheckEngineLight = (state: RootState) =>
   state.checkEngineLight.isActive;
 

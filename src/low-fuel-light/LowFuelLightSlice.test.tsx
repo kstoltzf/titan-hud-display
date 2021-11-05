@@ -1,6 +1,6 @@
 import lowFuelLightReducer, {
   LowFuelLightState,
-  setIsActive,
+  setLowFuelLightIsActive,
 } from "./LowFuelLightSlice";
 
 describe("low fuel light slice reducer", () => {
@@ -15,7 +15,10 @@ describe("low fuel light slice reducer", () => {
   });
 
   it("should handle setIsActive", () => {
-    const actual = lowFuelLightReducer(initialState, setIsActive(true));
+    const actual = lowFuelLightReducer(
+      initialState,
+      setLowFuelLightIsActive(true)
+    );
     expect(actual.isActive).toBeTruthy;
   });
 });

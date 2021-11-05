@@ -13,13 +13,13 @@ export const brakeWarningLightSlice = createSlice({
   name: "brakeWarningLight",
   initialState,
   reducers: {
-    setIsActive: (state, action: PayloadAction<boolean>) => {
+    setBrakeWarningLightIsActive: (state, action: PayloadAction<boolean>) => {
       state.isActive = action.payload;
     },
   },
 });
 
-export const { setIsActive } = brakeWarningLightSlice.actions;
+export const { setBrakeWarningLightIsActive } = brakeWarningLightSlice.actions;
 export const selectBrakeWarningLight = (state: RootState) =>
   state.brakeWarningLight.isActive;
 

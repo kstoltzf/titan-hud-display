@@ -1,6 +1,6 @@
 import batteryLightReducer, {
   BatteryLightState,
-  setIsActive,
+  setBatteryLightIsActive,
 } from "./BatteryLightSlice";
 
 describe("battery light slice reducer", () => {
@@ -15,7 +15,10 @@ describe("battery light slice reducer", () => {
   });
 
   it("should handle setIsActive", () => {
-    const actual = batteryLightReducer(initialState, setIsActive(true));
+    const actual = batteryLightReducer(
+      initialState,
+      setBatteryLightIsActive(true)
+    );
     expect(actual.isActive).toBeTruthy;
   });
 });

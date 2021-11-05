@@ -1,6 +1,6 @@
 import checkEngineLightReducer, {
   CheckEngineLightState,
-  setIsActive,
+  setCheckEngineLightIsActive,
 } from "./CheckEngineLightSlice";
 
 describe("check engine light slice reducer", () => {
@@ -15,7 +15,10 @@ describe("check engine light slice reducer", () => {
   });
 
   it("should handle setIsActive", () => {
-    const actual = checkEngineLightReducer(initialState, setIsActive(true));
+    const actual = checkEngineLightReducer(
+      initialState,
+      setCheckEngineLightIsActive(true)
+    );
     expect(actual.isActive).toBeTruthy;
   });
 });

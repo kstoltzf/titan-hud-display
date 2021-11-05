@@ -1,6 +1,6 @@
 import absWarningLightReducer, {
   AbsWarningLightState,
-  setIsActive,
+  setAbsWarningLightIsActive,
 } from "./AbsWarningLightSlice";
 
 describe("abs warning light slice reducer", () => {
@@ -15,7 +15,10 @@ describe("abs warning light slice reducer", () => {
   });
 
   it("should handle setIsActive", () => {
-    const actual = absWarningLightReducer(initialState, setIsActive(true));
+    const actual = absWarningLightReducer(
+      initialState,
+      setAbsWarningLightIsActive(true)
+    );
     expect(actual.isActive).toBeTruthy;
   });
 });

@@ -1,6 +1,6 @@
 import tractionControlLightReducer, {
   TractionControlLightState,
-  setIsActive,
+  setTractionControlLightIsActive,
 } from "./TractionControlLightSlice";
 
 describe("traction control light slice reducer", () => {
@@ -17,7 +17,10 @@ describe("traction control light slice reducer", () => {
   });
 
   it("should handle setIsActive", () => {
-    const actual = tractionControlLightReducer(initialState, setIsActive(true));
+    const actual = tractionControlLightReducer(
+      initialState,
+      setTractionControlLightIsActive(true)
+    );
     expect(actual.isActive).toBeTruthy;
   });
 });

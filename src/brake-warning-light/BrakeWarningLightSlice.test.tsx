@@ -1,6 +1,6 @@
 import brakeWarningLightReducer, {
   BrakeWarningLightState,
-  setIsActive,
+  setBrakeWarningLightIsActive,
 } from "./BrakeWarningLightSlice";
 
 describe("brake warning light slice reducer", () => {
@@ -15,7 +15,10 @@ describe("brake warning light slice reducer", () => {
   });
 
   it("should handle setIsActive", () => {
-    const actual = brakeWarningLightReducer(initialState, setIsActive(true));
+    const actual = brakeWarningLightReducer(
+      initialState,
+      setBrakeWarningLightIsActive(true)
+    );
     expect(actual.isActive).toBeTruthy;
   });
 });
