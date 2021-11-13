@@ -6,11 +6,14 @@ import { setCoolantTemperatureLightIsActive } from "./CoolantTemperatureLightSli
 
 describe("coolant temperature light", () => {
   test("does not render when state is not active", () => {
+    store.dispatch(setCoolantTemperatureLightIsActive(false));
+
     render(
       <Provider store={store}>
         <CoolantTemperatureLight />
       </Provider>
     );
+
     const coolantTemperatureLightElement = screen.queryByAltText(
       "coolantTemperatureLightIcon"
     );
@@ -25,6 +28,7 @@ describe("coolant temperature light", () => {
         <CoolantTemperatureLight />
       </Provider>
     );
+
     const coolantTemperatureLightElement = screen.getByAltText(
       "coolantTemperatureLightIcon"
     );

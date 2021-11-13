@@ -6,11 +6,14 @@ import { setLowFuelLightIsActive } from "./LowFuelLightSlice";
 
 describe("low fuel light", () => {
   test("does not render when state is not active", () => {
+    store.dispatch(setLowFuelLightIsActive(false));
+
     render(
       <Provider store={store}>
         <LowFuelLight />
       </Provider>
     );
+
     const lowFuelLightElement = screen.queryByAltText("lowFuelLightIcon");
     expect(lowFuelLightElement).toBeNull();
   });
@@ -23,6 +26,7 @@ describe("low fuel light", () => {
         <LowFuelLight />
       </Provider>
     );
+
     const lowFuelLightElement = screen.getByAltText("lowFuelLightIcon");
     expect(lowFuelLightElement).toBeInTheDocument();
   });

@@ -6,11 +6,14 @@ import { setBatteryLightIsActive } from "./BatteryLightSlice";
 
 describe("battery light", () => {
   test("does not render when state is not active", () => {
+    store.dispatch(setBatteryLightIsActive(false));
+
     render(
       <Provider store={store}>
         <BatteryLight />
       </Provider>
     );
+
     const batteryLightElement = screen.queryByAltText("batteryLightIcon");
     expect(batteryLightElement).toBeNull();
   });
@@ -23,6 +26,7 @@ describe("battery light", () => {
         <BatteryLight />
       </Provider>
     );
+
     const batteryLightElement = screen.getByAltText("batteryLightIcon");
     expect(batteryLightElement).toBeInTheDocument();
   });

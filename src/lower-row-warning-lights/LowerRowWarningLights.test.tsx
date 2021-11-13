@@ -9,6 +9,11 @@ import { setTractionControlLightIsActive } from "../traction-control-light/Tract
 
 describe("lower row warning lights", () => {
   test("do not render when states are not active", () => {
+    store.dispatch(setAbsWarningLightIsActive(false));
+    store.dispatch(setCheckEngineLightIsActive(false));
+    store.dispatch(setLowFuelLightIsActive(false));
+    store.dispatch(setTractionControlLightIsActive(false));
+
     render(
       <Provider store={store}>
         <LowerRowWarningLights />

@@ -6,11 +6,14 @@ import { setTractionControlLightIsActive } from "./TractionControlLightSlice";
 
 describe("traction control light", () => {
   test("does not render when state is not active", () => {
+    store.dispatch(setTractionControlLightIsActive(false));
+
     render(
       <Provider store={store}>
         <TractionControlLight />
       </Provider>
     );
+
     const tractionControlLightElement = screen.queryByAltText(
       "tractionControlLightIcon"
     );
@@ -25,6 +28,7 @@ describe("traction control light", () => {
         <TractionControlLight />
       </Provider>
     );
+
     const tractionControlLightElement = screen.getByAltText(
       "tractionControlLightIcon"
     );

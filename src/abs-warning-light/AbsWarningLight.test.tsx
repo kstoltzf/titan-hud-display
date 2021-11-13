@@ -5,12 +5,15 @@ import { setAbsWarningLightIsActive } from "./AbsWarningLightSlice";
 import store from "../app/Store";
 
 describe("abs warning light", () => {
-  test("does not render when state is not active", async () => {
+  test("does not render when state is not active", () => {
+    store.dispatch(setAbsWarningLightIsActive(false));
+
     render(
       <Provider store={store}>
         <AbsWarningLight />
       </Provider>
     );
+
     const absWarningLightElement = screen.queryByAltText("absWarningLightIcon");
     expect(absWarningLightElement).toBeNull();
   });

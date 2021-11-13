@@ -6,11 +6,14 @@ import { setCheckEngineLightIsActive } from "./CheckEngineLightSlice";
 
 describe("check engine light", () => {
   test("does not render when state is not active", () => {
+    store.dispatch(setCheckEngineLightIsActive(false));
+
     render(
       <Provider store={store}>
         <CheckEngineLight />
       </Provider>
     );
+
     const checkEngineLightElement = screen.queryByAltText(
       "checkEngineLightIcon"
     );
@@ -25,6 +28,7 @@ describe("check engine light", () => {
         <CheckEngineLight />
       </Provider>
     );
+
     const checkEngineLightElement = screen.getByAltText("checkEngineLightIcon");
     expect(checkEngineLightElement).toBeInTheDocument();
   });

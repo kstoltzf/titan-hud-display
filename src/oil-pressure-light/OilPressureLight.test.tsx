@@ -5,12 +5,15 @@ import OilPressureLight from "./OilPressureLight";
 import { setOilPressureLightIsActive } from "./OilPressureLightSlice";
 
 describe("oil pressure light", () => {
-  test("does not render when state is note active", () => {
+  test("does not render when state is not active", () => {
+    store.dispatch(setOilPressureLightIsActive(false));
+
     render(
       <Provider store={store}>
         <OilPressureLight />
       </Provider>
     );
+
     const oilPressureLightElement = screen.queryByAltText(
       "oilPressureLightIcon"
     );
@@ -25,6 +28,7 @@ describe("oil pressure light", () => {
         <OilPressureLight />
       </Provider>
     );
+
     const oilPressureLightElement = screen.getByAltText("oilPressureLightIcon");
     expect(oilPressureLightElement).toBeInTheDocument();
   });

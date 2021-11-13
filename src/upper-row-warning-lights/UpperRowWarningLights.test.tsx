@@ -9,6 +9,11 @@ import UpperRowWarningLights from "./UpperRowWarningLights";
 
 describe("upper row warning lights", () => {
   test("do not render when states are not active", () => {
+    store.dispatch(setOilPressureLightIsActive(false));
+    store.dispatch(setBatteryLightIsActive(false));
+    store.dispatch(setCoolantTemperatureLightIsActive(false));
+    store.dispatch(setBrakeWarningLightIsActive(false));
+
     render(
       <Provider store={store}>
         <UpperRowWarningLights />

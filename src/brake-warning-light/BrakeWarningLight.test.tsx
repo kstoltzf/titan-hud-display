@@ -6,11 +6,14 @@ import { setBrakeWarningLightIsActive } from "./BrakeWarningLightSlice";
 
 describe("brake warning light", () => {
   test("does not render when state is not active", () => {
+    store.dispatch(setBrakeWarningLightIsActive(false));
+
     render(
       <Provider store={store}>
         <BrakeWarningLight />
       </Provider>
     );
+
     const brakeWarningLightElement = screen.queryByAltText(
       "brakeWarningLightIcon"
     );
@@ -25,6 +28,7 @@ describe("brake warning light", () => {
         <BrakeWarningLight />
       </Provider>
     );
+
     const brakeWarningLightElement = screen.getByAltText(
       "brakeWarningLightIcon"
     );
