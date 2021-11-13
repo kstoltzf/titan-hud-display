@@ -19,6 +19,6 @@ describe("brake warning light slice reducer", () => {
       initialState,
       setBrakeWarningLightIsActive(true)
     );
-    expect(actual.isActive).toBeTruthy;
+    expect(actual.isActive).toBeTruthy();
   });
 });

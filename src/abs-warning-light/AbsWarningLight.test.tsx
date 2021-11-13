@@ -1,23 +1,18 @@
 import { render, screen } from "@testing-library/react";
 import AbsWarningLight from "./AbsWarningLight";
 import { Provider } from "react-redux";
-import absWarningLightReducer, {
-  AbsWarningLightState,
-  setAbsWarningLightIsActive,
-  selectAbsWarningLight,
-} from "./AbsWarningLightSlice";
+import { setAbsWarningLightIsActive } from "./AbsWarningLightSlice";
 import store from "../app/Store";
-import { useAppSelector } from "../app/Hooks";
 
 describe("abs warning light", () => {
-  test("does not render when state is not active", () => {
+  test("does not render when state is not active", async () => {
     render(
       <Provider store={store}>
         <AbsWarningLight />
       </Provider>
     );
-    const absWarningLightElement = screen.findByAltText("absWarningLightIcon");
-    expect(absWarningLightElement).toMatchObject({});
+    const absWarningLightElement = screen.queryByAltText("absWarningLightIcon");
+    expect(absWarningLightElement).toBeNull();
   });
 
   test("renders when state is active", () => {

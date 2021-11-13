@@ -5,10 +5,7 @@ import { setCheckEngineLightIsActive } from "../check-engine-light/CheckEngineLi
 import store from "../app/Store";
 import LowerRowWarningLights from "./LowerRowWarningLights";
 import { setLowFuelLightIsActive } from "../low-fuel-light/LowFuelLightSlice";
-import {
-  selectTractionControlLight,
-  setTractionControlLightIsActive,
-} from "../traction-control-light/TractionControlLightSlice";
+import { setTractionControlLightIsActive } from "../traction-control-light/TractionControlLightSlice";
 
 describe("lower row warning lights", () => {
   test("do not render when states are not active", () => {
@@ -18,28 +15,28 @@ describe("lower row warning lights", () => {
       </Provider>
     );
 
-    const checkEngineLightElement = screen.findByAltText(
+    const checkEngineLightElement = screen.queryByAltText(
       "checkEngineLightIcon"
     );
-    expect(checkEngineLightElement).toMatchObject({});
+    expect(checkEngineLightElement).toBeNull();
 
-    const lowFuelLightElement = screen.findByAltText("lowFuelLightIcon");
-    expect(lowFuelLightElement).toMatchObject({});
+    const lowFuelLightElement = screen.queryByAltText("lowFuelLightIcon");
+    expect(lowFuelLightElement).toBeNull();
 
-    const absWarningLightElement = screen.findByAltText("absWarningLightIcon");
-    expect(absWarningLightElement).toMatchObject({});
+    const absWarningLightElement = screen.queryByAltText("absWarningLightIcon");
+    expect(absWarningLightElement).toBeNull();
 
-    const tractionControlLightElement = screen.findByAltText(
+    const tractionControlLightElement = screen.queryByAltText(
       "tractionControlLightIcon"
     );
-    expect(tractionControlLightElement).toMatchObject({});
+    expect(tractionControlLightElement).toBeNull();
   });
 
   test("render when states are active", () => {
     store.dispatch(setAbsWarningLightIsActive(true));
     store.dispatch(setCheckEngineLightIsActive(true));
     store.dispatch(setLowFuelLightIsActive(true));
-    // store.dispatch(setTractionControlLightIsActive(true))
+    store.dispatch(setTractionControlLightIsActive(true));
 
     render(
       <Provider store={store}>

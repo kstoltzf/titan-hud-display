@@ -11,10 +11,10 @@ describe("traction control light", () => {
         <TractionControlLight />
       </Provider>
     );
-    const tractionControlLightElement = screen.findByAltText(
+    const tractionControlLightElement = screen.queryByAltText(
       "tractionControlLightIcon"
     );
-    expect(tractionControlLightElement).toMatchObject({});
+    expect(tractionControlLightElement).toBeNull();
   });
 
   test("renders when state is active", () => {

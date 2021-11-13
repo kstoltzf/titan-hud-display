@@ -11,10 +11,10 @@ describe("oil pressure light", () => {
         <OilPressureLight />
       </Provider>
     );
-    const oilPressureLightElement = screen.findByAltText(
+    const oilPressureLightElement = screen.queryByAltText(
       "oilPressureLightIcon"
     );
-    expect(oilPressureLightElement).toMatchObject({});
+    expect(oilPressureLightElement).toBeNull();
   });
 
   test("renders when state is active", () => {

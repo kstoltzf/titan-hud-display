@@ -19,6 +19,6 @@ describe("oil pressure light slice reducer", () => {
       initialState,
       setOilPressureLightIsActive(true)
     );
-    expect(actual.isActive).toBeTruthy;
+    expect(actual.isActive).toBeTruthy();
   });
 });

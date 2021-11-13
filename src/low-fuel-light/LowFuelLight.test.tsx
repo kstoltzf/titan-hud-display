@@ -11,8 +11,8 @@ describe("low fuel light", () => {
         <LowFuelLight />
       </Provider>
     );
-    const lowFuelLightElement = screen.findByAltText("lowFuelLightIcon");
-    expect(lowFuelLightElement).toMatchObject({});
+    const lowFuelLightElement = screen.queryByAltText("lowFuelLightIcon");
+    expect(lowFuelLightElement).toBeNull();
   });
 
   test("renders when state is active", () => {

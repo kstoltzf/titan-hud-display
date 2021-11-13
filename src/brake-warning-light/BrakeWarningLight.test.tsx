@@ -11,10 +11,10 @@ describe("brake warning light", () => {
         <BrakeWarningLight />
       </Provider>
     );
-    const brakeWarningLightElement = screen.findByAltText(
+    const brakeWarningLightElement = screen.queryByAltText(
       "brakeWarningLightIcon"
     );
-    expect(brakeWarningLightElement).toMatchObject({});
+    expect(brakeWarningLightElement).toBeNull();
   });
 
   test("renders when state is active", () => {

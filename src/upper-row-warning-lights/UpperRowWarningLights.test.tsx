@@ -15,30 +15,30 @@ describe("upper row warning lights", () => {
       </Provider>
     );
 
-    const oilPressureLightElement = screen.findByAltText(
+    const oilPressureLightElement = screen.queryByAltText(
       "oilPressureLightIcon"
     );
-    expect(oilPressureLightElement).toMatchObject({});
+    expect(oilPressureLightElement).toBeNull();
 
-    const batteryLightElement = screen.findByAltText("batteryLightIcon");
-    expect(batteryLightElement).toMatchObject({});
+    const batteryLightElement = screen.queryByAltText("batteryLightIcon");
+    expect(batteryLightElement).toBeNull();
 
-    const coolantTemperatureLightElement = screen.findByAltText(
+    const coolantTemperatureLightElement = screen.queryByAltText(
       "coolantTemperatureLightIcon"
     );
-    expect(coolantTemperatureLightElement).toMatchObject({});
+    expect(coolantTemperatureLightElement).toBeNull();
 
-    const brakeWarningLightElement = screen.findByAltText(
+    const brakeWarningLightElement = screen.queryByAltText(
       "brakeWarningLightIcon"
     );
-    expect(brakeWarningLightElement).toMatchObject({});
+    expect(brakeWarningLightElement).toBeNull();
   });
 
   test("render when states are active", () => {
     store.dispatch(setOilPressureLightIsActive(true));
     store.dispatch(setBatteryLightIsActive(true));
     store.dispatch(setCoolantTemperatureLightIsActive(true));
-    // store.dispatch(setBrakeWarningLightIsActive(true))
+    store.dispatch(setBrakeWarningLightIsActive(true));
 
     render(
       <Provider store={store}>

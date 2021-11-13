@@ -19,6 +19,6 @@ describe("battery light slice reducer", () => {
       initialState,
       setBatteryLightIsActive(true)
     );
-    expect(actual.isActive).toBeTruthy;
+    expect(actual.isActive).toBeTruthy();
   });
 });

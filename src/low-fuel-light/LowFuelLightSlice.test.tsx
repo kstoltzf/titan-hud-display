@@ -19,6 +19,6 @@ describe("low fuel light slice reducer", () => {
       initialState,
       setLowFuelLightIsActive(true)
     );
-    expect(actual.isActive).toBeTruthy;
+    expect(actual.isActive).toBeTruthy();
   });
 });

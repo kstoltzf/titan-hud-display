@@ -19,6 +19,6 @@ describe("abs warning light slice reducer", () => {
       initialState,
       setAbsWarningLightIsActive(true)
     );
-    expect(actual.isActive).toBeTruthy;
+    expect(actual.isActive).toBeTruthy();
   });
 });

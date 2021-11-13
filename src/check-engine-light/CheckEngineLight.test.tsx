@@ -11,10 +11,10 @@ describe("check engine light", () => {
         <CheckEngineLight />
       </Provider>
     );
-    const checkEngineLightElement = screen.findByAltText(
+    const checkEngineLightElement = screen.queryByAltText(
       "checkEngineLightIcon"
     );
-    expect(checkEngineLightElement).toMatchObject({});
+    expect(checkEngineLightElement).toBeNull();
   });
 
   test("renders when state is active", () => {

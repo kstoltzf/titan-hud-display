@@ -11,10 +11,10 @@ describe("coolant temperature light", () => {
         <CoolantTemperatureLight />
       </Provider>
     );
-    const coolantTemperatureLightElement = screen.findByAltText(
+    const coolantTemperatureLightElement = screen.queryByAltText(
       "coolantTemperatureLightIcon"
     );
-    expect(coolantTemperatureLightElement).toMatchObject({});
+    expect(coolantTemperatureLightElement).toBeNull();
   });
 
   test("renders when state is active", () => {

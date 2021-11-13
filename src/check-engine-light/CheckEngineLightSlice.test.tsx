@@ -19,6 +19,6 @@ describe("check engine light slice reducer", () => {
       initialState,
       setCheckEngineLightIsActive(true)
     );
-    expect(actual.isActive).toBeTruthy;
+    expect(actual.isActive).toBeTruthy();
   });
 });

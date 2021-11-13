@@ -21,6 +21,6 @@ describe("traction control light slice reducer", () => {
       initialState,
       setTractionControlLightIsActive(true)
     );
-    expect(actual.isActive).toBeTruthy;
+    expect(actual.isActive).toBeTruthy();
   });
 });

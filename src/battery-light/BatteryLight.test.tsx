@@ -11,8 +11,8 @@ describe("battery light", () => {
         <BatteryLight />
       </Provider>
     );
-    const batteryLightElement = screen.findByAltText("batteryLightIcon");
-    expect(batteryLightElement).toMatchObject({});
+    const batteryLightElement = screen.queryByAltText("batteryLightIcon");
+    expect(batteryLightElement).toBeNull();
   });
 
   test("renders when state is active", () => {

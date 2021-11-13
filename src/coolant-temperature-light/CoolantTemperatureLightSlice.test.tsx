@@ -21,6 +21,6 @@ describe("coolant temperature light slice reducer", () => {
       initialState,
       setCoolantTemperatureLightIsActive(true)
     );
-    expect(actual.isActive).toBeTruthy;
+    expect(actual.isActive).toBeTruthy();
   });
 });
