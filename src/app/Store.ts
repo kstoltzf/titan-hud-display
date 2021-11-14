@@ -7,6 +7,7 @@ import brakeWarningLightReducer from "../brake-warning-light/BrakeWarningLightSl
 import coolantTemperatureLightReducer from "../coolant-temperature-light/CoolantTemperatureLightSlice";
 import oilPressureLightReducer from "../oil-pressure-light/OilPressureLightSlice";
 import tractionControlLightReducer from "../traction-control-light/TractionControlLightSlice";
+import speedometerReducer from "../speedometer/SpeedometerSlice";
 
 const store = configureStore({
   reducer: {
@@ -18,6 +19,7 @@ const store = configureStore({
     coolantTemperatureLight: coolantTemperatureLightReducer,
     oilPressureLight: oilPressureLightReducer,
     tractionControlLight: tractionControlLightReducer,
+    speedometer: speedometerReducer,
   },
 });
 

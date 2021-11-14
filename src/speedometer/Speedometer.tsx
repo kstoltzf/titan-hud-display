@@ -1,3 +1,16 @@
+import { useAppSelector } from "../app/Hooks";
+import { getCurrentSpeed } from "./SpeedometerSlice";
+
 export default function Speedometer() {
-  return <p style={{ fontSize: "xx-large" }}>150 MPH</p>;
+  const currentSpeed = useAppSelector(getCurrentSpeed);
+
+  return (
+    <p
+      aria-label="speedometer"
+      style={{ fontSize: "xx-large" }}
+      data-cy="speedometer"
+    >
+      {currentSpeed} MPH
+    </p>
+  );
 }
