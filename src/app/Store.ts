@@ -8,6 +8,7 @@ import coolantTemperatureLightReducer from "../coolant-temperature-light/Coolant
 import oilPressureLightReducer from "../oil-pressure-light/OilPressureLightSlice";
 import tractionControlLightReducer from "../traction-control-light/TractionControlLightSlice";
 import speedometerReducer from "../speedometer/SpeedometerSlice";
+import tachometerReducer from "../tachometer/TachometerSlice";
 
 const store = configureStore({
   reducer: {
@@ -20,6 +21,7 @@ const store = configureStore({
     oilPressureLight: oilPressureLightReducer,
     tractionControlLight: tractionControlLightReducer,
     speedometer: speedometerReducer,
+    tachometer: tachometerReducer,
   },
 });
 

@@ -1,5 +1,7 @@
 import LinearProgress from "@material-ui/core/LinearProgress";
+import { useAppSelector } from "../app/Hooks";
 import { createStyles, withStyles } from "@material-ui/core/styles";
+import { getCurrentRpms } from "./TachometerSlice";
 
 const BorderLinearProgress = withStyles(() =>
   createStyles({
@@ -15,10 +17,23 @@ const BorderLinearProgress = withStyles(() =>
 )(LinearProgress);
 
 export default function Tachometer() {
+  const currentRpms = useAppSelector(getCurrentRpms);
+
   return (
     <div className="">
-      <BorderLinearProgress variant="determinate" value={50} />
-      <p style={{ fontSize: "xx-large" }}>1200 RPMs</p>
+      <BorderLinearProgress
+        aria-label="tachometerBar"
+        data-cy="tachometerBar"
+        variant="determinate"
+        value={currentRpms / 100}
+      />
+      <p
+        aria-label="tachometerText"
+        data-cy="tachometerText"
+        style={{ fontSize: "xx-large" }}
+      >
+        {currentRpms} RPMs
+      </p>
     </div>
   );
 }
