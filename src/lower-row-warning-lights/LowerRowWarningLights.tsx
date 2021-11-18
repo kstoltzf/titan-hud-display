@@ -1,13 +1,13 @@
-import Table from "@material-ui/core/Table";
-import TableBody from "@material-ui/core/TableBody";
-import TableCell from "@material-ui/core/TableCell";
-import TableContainer from "@material-ui/core/TableContainer";
-import TableRow from "@material-ui/core/TableRow";
-import Paper from "@material-ui/core/Paper";
+import Table from "@mui/material/Table";
+import TableBody from "@mui/material/TableBody";
+import TableCell from "@mui/material/TableCell";
+import TableContainer from "@mui/material/TableContainer";
+import TableRow from "@mui/material/TableRow";
+import Paper from "@mui/material/Paper";
 import CheckEngineLight from "../check-engine-light/CheckEngineLight";
 import LowFuelLight from "../low-fuel-light/LowFuelLight";
 import "./LowerRowWarningLights.css";
-import { makeStyles } from "@material-ui/core";
+import { makeStyles } from "@mui/styles";
 import TractionControlLight from "../traction-control-light/TractionControlLight";
 import AbsWarningLight from "../abs-warning-light/AbsWarningLight";
 

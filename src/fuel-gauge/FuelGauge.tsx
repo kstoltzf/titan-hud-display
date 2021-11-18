@@ -1,5 +1,5 @@
-import { createStyles, withStyles } from "@material-ui/core/styles";
-import LinearProgress from "@material-ui/core/LinearProgress";
+import { createStyles, withStyles } from "@mui/styles";
+import LinearProgress from "@mui/material/LinearProgress";
 import { getCurrentFuelLevelPercent } from "./FuelGaugeSlice";
 import { useAppSelector } from "../app/Hooks";
 

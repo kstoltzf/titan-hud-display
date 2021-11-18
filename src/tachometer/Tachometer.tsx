@@ -1,6 +1,6 @@
-import LinearProgress from "@material-ui/core/LinearProgress";
+import LinearProgress from "@mui/material/LinearProgress";
 import { useAppSelector } from "../app/Hooks";
-import { createStyles, withStyles } from "@material-ui/core/styles";
+import { createStyles, withStyles } from "@mui/styles";
 import { getCurrentRpms } from "./TachometerSlice";
 
 const BorderLinearProgress = withStyles(() =>

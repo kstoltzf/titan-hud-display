@@ -1,15 +1,15 @@
-import Table from "@material-ui/core/Table";
-import TableBody from "@material-ui/core/TableBody";
-import TableCell from "@material-ui/core/TableCell";
-import TableContainer from "@material-ui/core/TableContainer";
-import TableRow from "@material-ui/core/TableRow";
-import Paper from "@material-ui/core/Paper";
+import Table from "@mui/material/Table";
+import TableBody from "@mui/material/TableBody";
+import TableCell from "@mui/material/TableCell";
+import TableContainer from "@mui/material/TableContainer";
+import TableRow from "@mui/material/TableRow";
+import Paper from "@mui/material/Paper";
 import BatteryLight from "../battery-light/BatteryLight";
 import OilPressureLight from "../oil-pressure-light/OilPressureLight";
 import CoolantTemperatureLight from "../coolant-temperature-light/CoolantTemperatureLight";
 import BrakeWarningLight from "../brake-warning-light/BrakeWarningLight";
 import "./UpperRowWarningLights.css";
-import { makeStyles } from "@material-ui/core";
+import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles({
   table: {
