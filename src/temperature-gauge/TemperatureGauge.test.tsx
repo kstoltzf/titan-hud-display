@@ -4,7 +4,6 @@ import store from "../app/Store";
 import TemperatureGauge from "./TemperatureGauge";
 import { setCurrentTemperature } from "./TemperatureGaugeSlice";
 
-
 describe("temperature gauge", () => {
   test("renders correct initial temperature", () => {
     store.dispatch(setCurrentTemperature(0));

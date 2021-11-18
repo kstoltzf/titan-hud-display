@@ -25,7 +25,7 @@ const store = configureStore({
     speedometer: speedometerReducer,
     tachometer: tachometerReducer,
     fuelGauge: fuelGaugeReducer,
-    temperatureGauge: temperatureGaugeReducer
+    temperatureGauge: temperatureGaugeReducer,
   },
 });
 

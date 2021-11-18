@@ -6,10 +6,20 @@ export default function TemperatureGauge() {
 
   return (
     <div>
-      <p         aria-label="temperatureGaugeLabel"
-        data-cy="temperatureGaugeLabel" style={{ fontSize: "small" }}>Coolant Temperature</p>
-      <p         aria-label="temperatureGaugeValue"
-        data-cy="temperatureGaugeValue"style={{ fontSize: "x-large" }}>{currentTemperatue}&deg; F</p>
+      <p
+        aria-label="temperatureGaugeLabel"
+        data-cy="temperatureGaugeLabel"
+        style={{ fontSize: "small" }}
+      >
+        Coolant Temperature
+      </p>
+      <p
+        aria-label="temperatureGaugeValue"
+        data-cy="temperatureGaugeValue"
+        style={{ fontSize: "x-large" }}
+      >
+        {currentTemperatue}&deg; F
+      </p>
     </div>
   );
 }

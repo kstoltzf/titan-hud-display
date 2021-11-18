@@ -14,11 +14,14 @@ describe("temperature gauge", () => {
       </Provider>
     );
 
-    cy.get("[data-cy=temperatureGaugeLabel]").should("have.text", "Coolant Temperature");
+    cy.get("[data-cy=temperatureGaugeLabel]").should(
+      "have.text",
+      "Coolant Temperature"
+    );
     cy.get("[data-cy=temperatureGaugeValue]").should("have.text", "0° F");
   });
 
-  it("renders correct updated rpms", () => {
+  it("renders correct updated temperature", () => {
     store.dispatch(setCurrentTemperature(35));
 
     mount(
@@ -27,7 +30,10 @@ describe("temperature gauge", () => {
       </Provider>
     );
 
-    cy.get("[data-cy=temperatureGaugeLabel]").should("have.text", "Coolant Temperature");
+    cy.get("[data-cy=temperatureGaugeLabel]").should(
+      "have.text",
+      "Coolant Temperature"
+    );
     cy.get("[data-cy=temperatureGaugeValue]").should("have.text", "35° F");
   });
 });
