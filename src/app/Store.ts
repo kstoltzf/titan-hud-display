@@ -9,6 +9,7 @@ import oilPressureLightReducer from "../oil-pressure-light/OilPressureLightSlice
 import tractionControlLightReducer from "../traction-control-light/TractionControlLightSlice";
 import speedometerReducer from "../speedometer/SpeedometerSlice";
 import tachometerReducer from "../tachometer/TachometerSlice";
+import fuelGaugeReducer from "../fuel-gauge/FuelGaugeSlice";
 
 const store = configureStore({
   reducer: {
@@ -22,6 +23,7 @@ const store = configureStore({
     tractionControlLight: tractionControlLightReducer,
     speedometer: speedometerReducer,
     tachometer: tachometerReducer,
+    fuelGauge: fuelGaugeReducer,
   },
 });
 

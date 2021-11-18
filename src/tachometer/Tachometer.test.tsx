@@ -14,11 +14,11 @@ describe("tachometer", () => {
       </Provider>
     );
 
-    const actualTachometerText = screen.getByText("0 RPMs");
-    expect(actualTachometerText).toBeInTheDocument();
+    const tachometerText = screen.getByText("0 RPMs");
+    expect(tachometerText).toBeInTheDocument();
 
-    const actualTachometerBar = screen.getByLabelText("tachometerBar");
-    expect(actualTachometerBar).toBeInTheDocument();
+    const tachometerBar = screen.getByLabelText("tachometerBar");
+    expect(tachometerBar).toBeInTheDocument();
   });
 
   test("renders correct updated speed", () => {
@@ -30,10 +30,10 @@ describe("tachometer", () => {
       </Provider>
     );
 
-    const actualTachometerText = screen.getByText("4200 RPMs");
-    expect(actualTachometerText).toBeInTheDocument();
+    const tachometerText = screen.getByText("4200 RPMs");
+    expect(tachometerText).toBeInTheDocument();
 
-    const actualTachometerBar = screen.getByLabelText("tachometerBar");
-    expect(actualTachometerBar).toBeInTheDocument();
+    const tachometerBar = screen.getByLabelText("tachometerBar");
+    expect(tachometerBar).toBeInTheDocument();
   });
 });
