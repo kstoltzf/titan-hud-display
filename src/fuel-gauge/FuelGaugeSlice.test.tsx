@@ -14,7 +14,7 @@ describe("fuel gauge slice reducer", () => {
     });
   });
 
-  it("should handle setCurrentSpeed", () => {
+  it("should handle setCurrentFuelLevelPercent", () => {
     const actual = fuelGaugeReducer(
       initialState,
       setCurrentFuelLevelPercent(55)

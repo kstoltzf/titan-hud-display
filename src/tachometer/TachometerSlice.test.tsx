@@ -14,7 +14,7 @@ describe("tachometer slice reducer", () => {
     });
   });
 
-  it("should handle setCurrentSpeed", () => {
+  it("should handle setCurrentRpms", () => {
     const actual = tachometerReducer(initialState, setCurrentRpms(4200));
     expect(actual.currentRpms).toBe(4200);
   });
