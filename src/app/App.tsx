@@ -3,13 +3,18 @@ import LowerRowWarningLights from "../lower-row-warning-lights/LowerRowWarningLi
 import InfoRow from "../info-row/InfoRow";
 import { useAppDispatch } from "./Hooks";
 import { useEffect } from "react";
-import WebSocketConfiguration from "./WebSocketConfiguration";
+import NumberPayloadMessageReceiver from "./NumberPayloadMessageReceiver";
+import { io } from "socket.io-client";
+import BooleanPayloadMessageReceiver from "./BooleanPayloadMessageReceiver";
 
 export default function App() {
   const dispatch = useAppDispatch();
+  const socket = io(`http://localhost:3100`);
+  socket.connect();
 
   useEffect(() => {
-    WebSocketConfiguration(dispatch);
+    NumberPayloadMessageReceiver(dispatch, socket);
+    BooleanPayloadMessageReceiver(dispatch, socket);
   });
 
   return (
