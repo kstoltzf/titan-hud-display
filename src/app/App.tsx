@@ -14,8 +14,8 @@ export default function App() {
 
   return (
     <div>
-      <UpperRowWarningLights />
       <InfoRow />
+      <UpperRowWarningLights />
       <LowerRowWarningLights />
     </div>
   );
